@@ -1,0 +1,43 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1573977611357'); /* IE9 */
+  src: url('iconfont.eot?t=1573977611357#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOcAAsAAAAACDQAAANQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDRgqDEIJhATYCJAMcCxAABCAFhG0HbBstB8gusG3Yk8VE2NQIlLtLV7gY8SZEUO332bO7jw9ZAbo7CcHyUSSJLbCNAiGjVHyEizBs4///6rTvqECguRDcCsyu8+U4JD9ZKdEBbQgj8bJdtoMptwHON2bw3KJpOiqaDWXmB6/kE0YRvaN8gZV1HCCxtItL05RqAaxrZ8l41Ftv46ViMByggJZWv5L8i7yo/yKeTSclA3XsJ9DbUEe53DM0BSkKHBaIJ4auQkpBq3QUhlaoG+YW8RmoNn20fQA+Rb8f/7gjhaTKcOyVe91eaPs598NFjuLKAQp4y5khLyLjECjEs0brAySJHiJ6c7MEJ0Crlfi5+KPihys+AsIcF8OhNUH/4JEVlVoSRA3YxsB1kvrZeB5C5uc8QuHngkb1yDxwqQEeICR+ufif6pAGTKDDTeALxx/HsiQoresWdU4SDrl5d794Hl+XjlD8noskp3RbwXDj0Wb41J2r5KyuwADMXoWPH6eOnvrJN+H7oo699nmXMjWtyDfPHr98ZqpFR8705qlpjbVOzzZrLbMzrXhYnTI9QYajmJwLGx+AOuprO0oVly3t6xuDNg89SjHi5UM87OvL8/j9+3zeaaYjT8Zx271zxfOOuNU9W6cKfnLRL6LEigrdMPSgCMjRn1kQv6gwVm+FN76yKArfAwcAIwvk8wCjyCXSBIC8iOwASK9tN2xsMfr7X0AE/79ds5rd9LdDAT/+Vw+RYDne38EbzPvfeAPriiVAXVOM0l5fgcYewnsX6vX4z5LM+LqcfR5k5tAqPICksQ5ZaxNd8IdQGRxDrXUOegd6Fw9mCUSUDvvOMAhTXkIy4RtkU6Logo9BZcE/qE0Fgd7VyF9zsB1GWqdAVaKXrm9TQ+Nh5hpkWlw4gXokqIq8IKLOoLCMAHXZneVEL4ZRLDHB2tDdUjLKBA/RHnYYBoOcmoL7UZN2n5Rmg8PBmj7JrvEQpLlEQCoJeVHrtlEGDRfGgvZSWuXnJyBdRJBKdBQ1WWcgwWJ0T7nYOQege6XhQUWP8ohlg85NkhiKEbgQqoeZUZCiHGU29/JDGsnONyFsauDgzdhQqX17eeh77oAeXttEihwlqqijiVa5rQqZ4ouo4W3DNFI/ha9eovX5uEmdS+JwWzwA') format('woff2'),
+  url('iconfont.woff?t=1573977611357') format('woff'),
+  url('iconfont.ttf?t=1573977611357') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1573977611357#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e731";
+  margin-right: 5px;
+  vertical-align: 5px;
+}
+
+.icon-huanyipi:before {
+  content: "\e71c";
+}
+
+.icon-icon-test:before {
+  content: "\e658";
+}
+
+.icon-icon-test1:before {
+  content: "\e659";
+}
+
+.icon-icon-test2:before {
+  content: "\e65a";
+}
+
+.icon-icon-test3:before {
+  content: "\e65b";
+}
+
