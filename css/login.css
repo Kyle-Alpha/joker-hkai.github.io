@@ -1,0 +1,24 @@
+.w {
+  width: 1130px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 98px;
+  width: 200px;
+  background: url("../img/mistore_logo.png") no-repeat center center;
+}
+
+.box {
+  height: 526px;
+  margin: 0 auto;
+  background: url("../img/bg.jpg") no-repeat center center;
+  padding-top: 32px;
+}
+
+.login {
+  width: 410px;
+  height: 556px;
+  background-color: #fff;
+  margin-left: 720px;
+}
