@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>红米商城 - 小米9 Pro、小米MIX Alpha、Redmi Note 8，小米电视官方网站</title>
+    <title>小米商城 - 小米9 Pro、小米MIX Alpha、Redmi Note 8，小米电视官方网站</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/iconfont.css">
 </head>
@@ -26,12 +26,26 @@
                 <a href="javascript:void(0)">企业团购</a><span class="sep">|</span>
                 <a href="javascript:void(0)">资质证照</a><span class="sep">|</span>
                 <a href="javascript:void(0)">协议规则</a><span class="sep">|</span>
-                <a href="javascript:void(0)">下载app</a><span class="sep">|</span>
+                <a href="javascript:void(0)" id="downloadApp">下载app <span class="appcode"><img src="./img/appcode.png"
+                            alt="小米商城" width="90" height="90">
+                        小米商城APP
+                    </span></a><span class="sep">|</span>
                 <a href="javascript:void(0)">Select Location</a>
             </div>
             <div class="topbar-cart fr">
                 <a href="javascript:void(0)"><em class="iconfont icon-cart-full"></em> 购物车<span class="count">
                         (0)</span></a>
+                <div id="J_miniCartMenu" class="cart-menu " style="height: 0px;">
+                    <div class="menu-content">
+                        <div class="loading">
+                            <div class="loader"></div>
+                        </div>
+                        <ul id="J_miniCartList" class="cart-list hide"></ul>
+                        <div id="J_miniCartListTotal" class="cart-total clearfix hide"></div>
+                        <div class="msg msg-error hide"></div>
+                        <div class="msg msg-empty hide">购物车中还没有商品，赶紧选购吧！</div>
+                    </div>
+                </div>
             </div>
             <div class="topbar-info fr">
                 <a href="javascript:void(0)">登录</a><span class="sep">|</span>
@@ -51,13 +65,13 @@
                         <div class="site-category ">
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a href="#" class="title">手机卡 电话 <em class="iconfont icon-arrow-right"> </em></a>
+                                    <a href="#" class="title">手机 电话卡 <em class="iconfont icon-arrow-right"> </em></a>
                                 </li>
                                 <li class="category-item">
                                     <a href="#" class="title">电视 盒子<em class="iconfont icon-arrow-right"> </em></a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="title">笔记本 平板<em class="iconfont icon-arrow-right"> </em></a>
+                                    <a href="#" class="title">笔记本 显示器 平板<em class="iconfont icon-arrow-right"> </em></a>
                                 </li>
                                 <li class="category-item">
                                     <a href="#" class="title">家电 插线板<em class="iconfont icon-arrow-right"> </em></a>
@@ -83,6 +97,11 @@
 
                             </ul>
                         </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <sapn class="text">小米手机</sapn>
+                        </a>
                     </li>
                     <li>
                         <a href="#">
@@ -138,15 +157,25 @@
     </div>
     <div class="home-hero-container w">
         <div class="home-hero">
-            <div class="home-hero-swiper"><img src="img/banner01.webp" alt="">
+            <div class="home-hero-swiper">
+                <ul class="slider">
+                    <li><a href="javascript:;"><img src="img/banner01.webp" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/banner02.webp" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/banner03.webp" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="img/banner04.webp" alt=""></a></li>
+                </ul>
+
                 <div class="prev arrow"></div>
                 <div class="next arrow"></div>
                 <div class="swiper-circle">
-                    <a href="#" class="current"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a></div>
+                    <ul>
+                        <li  class="current"></li>
+                        <li ></li>
+                        <li ></li>
+                        <li ></li>
+
+                    </ul>
+                </div>
             </div>
 
             <div class="home-hero-sub clearfix">
@@ -183,11 +212,11 @@
                         <img src="img/flash.png" alt="">
                         <div class="desc">距离结束还有</div>
                         <div class="countdown">
-                            <span>00</span>
+                            <span id="hour">00</span>
                             <i>:</i>
-                            <span>30</span>
+                            <span id="minute">30</span>
                             <i>:</i>
-                            <span>59</span>
+                            <span id="second">59</span>
                         </div>
                     </div>
                     <div class="box-r">
@@ -729,19 +758,23 @@
 
     <div class="footer-site clearfix">
         <div class="w">
-            <div class="footer-service"> <ul>
-                <li><a href="#" class="iconfont icon-collection"></a></li>
-                <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
-                <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
-                <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
-                <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
-            </ul> </div>
+            <div class="footer-service">
+                <ul>
+                    <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
+                    <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
+                    <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
+                    <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
+                    <li><a href="#" class="iconfont icon-collection">预约维修服务</a></li>
+                </ul>
+            </div>
             <div class="footer-links">11</div>
         </div>
     </div>
     <div class="footer-info w clearfix">3123</div>
     </div>
     </div>
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

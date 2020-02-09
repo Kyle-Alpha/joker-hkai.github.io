@@ -8,7 +8,12 @@
     float: right;
 }
 
-
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 
 
 /*版心*/
@@ -22,10 +27,57 @@
     height: 40px;
     background-color: #333;
     line-height: 40px;
+    font-size: 12px;
+    position: relative;
+}
+
+.topbar a:hover {
+    color: #fff;
 }
 
 .topbar-nav .sep {
     margin: 0 7.5px;
+}
+#downloadApp {
+    position: relative;
+}
+.topbar-nav .appcode {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 124px;
+    height: 0;
+    background: #fff;
+    margin-left: -55px;
+    box-shadow: 0 1px 5px #aaa;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    overflow: hidden;
+    transition: height .3s;
+    z-index: 1;
+
+}
+#downloadApp.active .appcode{
+    height: 148px;
+}
+#downloadApp.active::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) #fff;
+}
+
+.appcode img {
+    display: block;
+    margin: 18px auto 12px;
 }
 
 .topbar-cart {
@@ -37,9 +89,7 @@
     margin-left: 10px;
 }
 
-.topbar-cart a:hover {
-    color: #ff6700;
-}
+
 
 
 
@@ -92,7 +142,7 @@
     width: 55px;
     height: 55px;
     /* 设置过渡 */
-    transition: all .5s;
+    transition: all .2s linear;
     /* 背景图片 */
     background: url(../img/mi-logo.png) no-repeat center center;
     /* 透明度 */
@@ -107,7 +157,7 @@
     top: 0;
     width: 55px;
     height: 55px;
-    transition: all .5s;
+    transition: all .2s linear;
     background: url(../img/mi-home.png) no-repeat center center;
     margin-left: -55px;
 }
@@ -185,6 +235,7 @@
     font-size: 14px;
     padding-left: 30px;
     color: #e0e0e0;
+    font-weight: 700;
 }
 
 .title .icon-arrow-right {
@@ -277,7 +328,9 @@
     background-color: #fff;
     position: relative;
 }
-
+.home-hero-swiper .slider li{
+    position: absolute;
+}
 .home-hero-sub {
     height: 170px;
     margin-top: 14px;
@@ -317,9 +370,26 @@
     line-height: 21px;
     bottom: 20px;
     right: 30px;
+    z-index: 10;
 }
+.swiper-circle ul{
+    height: 100%;
+    float: right;
+}
+.swiper-circle ul li{
 
-.swiper-circle a {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-color: hsla(0,0%,100%,.3);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,.4);
+    opacity: 1;
+    margin: 0 5px;
+}
+/* .swiper-circle a {
     display: block;
     float: right;
     width: 6px;
@@ -328,14 +398,16 @@
     border: 2px solid #ccc;
     border-radius: 50%;
     background-color: rgba(51, 51, 51, .6);
+} */
+
+.swiper-circle li.current {
+    background: hsla(0,0%,100%,.4);
+    border-color: rgba(0,0,0,.4);
 }
 
-.swiper-circle .current {
-    background-color: #fff;
-}
-
-.swiper-circle a:hover {
-    background-color: #fff;
+.swiper-circle li:hover {
+    background: hsla(0,0%,100%,.4);
+    border-color: rgba(0,0,0,.4);
 }
 
 .span4 ul {
@@ -775,17 +847,19 @@
     color: #000;
 }
 
-.footer-site{
+.footer-site {
     height: 272px;
     width: 100%;
     background-color: #fff;
 }
-.footer-service{
+
+.footer-service {
     padding: 27px 0;
     height: 80px;
-    border-bottom:1px solid #ccc ;
+    border-bottom: 1px solid #ccc;
 }
-.footer-service li{
+
+.footer-service li {
     float: left;
     width: 19.8%;
     height: 25px;
@@ -794,15 +868,18 @@
     line-height: 25px;
     text-align: center;
 }
-.footer-service li:first-child{
+
+.footer-service li:first-child {
     border: none;
 }
-.footer-links{
+
+.footer-links {
     padding: 40px 0;
     height: 272px;
     background-color: skyblue;
 }
-.footer-info{
+
+.footer-info {
     height: 250px;
     padding: 30px 0;
     background-color: purple;
